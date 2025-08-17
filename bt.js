@@ -175,7 +175,7 @@ do {
             var fn = prompt("Số hiệu chuyến bay:") || "";
             var ori = prompt("Nơi đi:") || "";
             var des = prompt("Nơi đến:") || "";
-            var dep = new Date(prompt("Thời gian khởi hành (YYYY-MM-DD HH:mm):"));
+            var dep = new Date(prompt("Thời gian khởi hành:") || "");
             var cap = Number(prompt("Sức chứa:") || "0");
             if (type === "1") {
                 airline.addFlight(new DomesticFlight(fn, ori, des, dep, cap));
@@ -187,7 +187,7 @@ do {
         case 3:
             var pid = Number(prompt("ID hành khách:") || "0");
             var fnum = prompt("Số hiệu chuyến bay:") || "";
-            var tickets = Number(prompt("Số lượng vé:"));
+            var tickets = Number(prompt("Số lượng vé:") || "");
             var baggage = Number(prompt("Cân nặng hành lý (kg):") || "0");
             airline.createBooking(pid, fnum, tickets, baggage);
             break;
